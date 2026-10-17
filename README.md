@@ -53,6 +53,22 @@ The homepage photography is served from the existing Unsplash image URLs. The Go
 
 ## Install and Run
 
+### Video setup
+
+The story video is stored with Git LFS. Install Git LFS before cloning, then initialize it once for your user account:
+
+```sh
+git lfs install
+```
+
+A normal clone will then retrieve the video along with the repository. If the repository was cloned before Git LFS was installed, download its LFS files with:
+
+```sh
+git lfs pull
+```
+
+### Run locally
+
 From this directory:
 
 ```sh
