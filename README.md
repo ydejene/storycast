@@ -40,7 +40,7 @@ storycast/
 `-- package-lock.json
 ```
 
-The narration source is maintained in `week_7/transcription.md` in the parent workspace and is not part of this repository. The compiled stylesheet is generated from `sass/main.scss` and its partials.
+The compiled stylesheet is generated from `sass/main.scss` and its partials.
 
 ## Technologies
 
