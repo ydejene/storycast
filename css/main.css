@@ -752,7 +752,10 @@
   }
   .story-video {
     width: 100%;
+    max-width: 900px;
+    height: auto;
     display: block;
+    margin-inline: auto;
     background: var(--forest);
   }
   .story-media-figure figcaption {
