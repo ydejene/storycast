@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "sass:build": "sass sass/main.scss css/main.css --style expanded --no-source-map",
+    "sass:watch": "sass sass/main.scss css/main.css --style expanded --no-source-map --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}
+
