@@ -40,7 +40,7 @@ storycast/
 `-- package-lock.json
 ```
 
-The narration source is maintained in `week_7/transcription.md` in the parent workspace and is not part of this repository. The compiled stylesheet is generated from `sass/main.scss` and its partials.
+The compiled stylesheet is generated from `sass/main.scss` and its partials.
 
 ## Technologies
 
@@ -93,7 +93,7 @@ The build compiles `sass/main.scss` to `css/main.css`, replacing the generated s
 
 ## Media and Transcript
 
-The story page uses the local MP4 video, M4A audio alternative, and `assets/captions/caption.vtt`. The WebVTT track is an optional player caption selection because the video already has burned-in captions. The written narration appears in an expandable transcript on the story page and is maintained from the workspace source `week_7/transcription.md`. Keep these formats together when updating narration so their wording remains aligned.
+The story page uses the local MP4 video, M4A audio alternative, and `assets/captions/caption.vtt`. The WebVTT track is an optional player caption selection because the video already has burned-in captions. The written narration appears in an expandable transcript on the story page. Keep these formats together when updating narration so their wording remains aligned.
 
 ## Planning and Research
 
