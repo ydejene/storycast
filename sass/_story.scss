@@ -1,0 +1,409 @@
+// Story detail page — hero header, media section, article layout, transcript.
+
+@layer page {
+  // ── Story hero ────────────────────────────────────────────────────────────
+
+  .story-page .back-link {
+    margin-bottom: 70px;
+  }
+
+  .story-hero {
+    padding: 44px 0 84px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .story-hero-inner {
+    position: relative;
+  }
+
+  .story-title-wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+
+    .story-label {
+      margin-bottom: 22px;
+      color: var(--forest);
+    }
+
+    h1 {
+      max-width: 1000px;
+      margin-bottom: 32px;
+      font-size: clamp(54px, 6vw, 82px);
+      line-height: 1;
+    }
+  }
+
+  .story-deck {
+    max-width: 790px;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 21px;
+    line-height: 1.6;
+  }
+
+  .medical-note {
+    max-width: 790px;
+    margin-bottom: 0;
+    padding: 18px 20px;
+    border-left: 3px solid var(--orange);
+    background: var(--white);
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.55;
+
+    strong {
+      color: var(--ink);
+    }
+  }
+
+  // ── Media section ─────────────────────────────────────────────────────────
+
+  .story-media-section {
+    padding: 88px 0 100px;
+    background: var(--white);
+  }
+
+  .story-media-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 34px;
+
+    .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 42px;
+      line-height: 1.1;
+    }
+  }
+
+  // Caption availability indicator chip beside the media heading.
+  .caption-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    color: var(--forest);
+    font-size: 14px;
+    font-weight: 700;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.6;
+    }
+  }
+
+  .story-media-figure {
+    margin: 0;
+    background: var(--cream);
+  }
+
+  // Native video player with a readable media description below the controls.
+  .story-video {
+    width: 100%;
+    display: block;
+    background: var(--forest);
+  }
+
+  .story-media-figure figcaption {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border);
+    border-top: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  // Audio-only alternative placed below the video.
+  .story-audio {
+    margin-top: 28px;
+    padding: var(--space-5);
+    border: 1px solid var(--border);
+    background: var(--cream);
+  }
+
+  .audio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    color: var(--forest);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .audio-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--forest);
+  }
+
+  .story-audio audio {
+    display: block;
+    width: 100%;
+  }
+
+  // ── Article layout ────────────────────────────────────────────────────────
+
+  .story-article {
+    padding: 110px 0;
+  }
+
+  .article-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 740px);
+    justify-content: center;
+    gap: 96px;
+  }
+
+  // Sticky in-page nav — becomes a two-column grid on narrow viewports.
+  .article-aside {
+    position: sticky;
+    top: 34px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    border-top: 2px solid var(--forest);
+
+    p {
+      margin: 14px 0 17px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    a {
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+
+      &:hover {
+        color: var(--forest);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+
+  .article-body > section {
+    scroll-margin-top: 30px;
+    margin-bottom: 96px;
+  }
+
+  .section-number {
+    margin-bottom: 13px;
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .article-body h2 {
+    margin-bottom: 28px;
+    color: var(--forest);
+    font-size: 45px;
+    line-height: 1.12;
+  }
+
+  .article-body .article-lead {
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 24px;
+    line-height: 1.45;
+  }
+
+  .article-body section > p:not(.section-number),
+  .myth-list p,
+  .transcript-content p {
+    color: var(--muted);
+    line-height: 1.72;
+  }
+
+  // Misconceptions — borderless list of myth/reality pairs.
+  .myth-list {
+    border-top: 1px solid var(--border);
+
+    > div {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  // Pull-quote callout block within the article body.
+  .article-callout {
+    position: relative;
+    margin: 0 0 96px;
+    padding: 42px 50px 42px 62px;
+    overflow: hidden;
+    background: var(--forest);
+    color: var(--white);
+
+    span {
+      position: absolute;
+      top: 6px;
+      left: 17px;
+      color: var(--orange);
+      font-family: var(--serif);
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: 27px;
+      line-height: 1.35;
+    }
+  }
+
+  // Collapsible transcript — accessible <details>/<summary> pattern.
+  .transcript {
+    border: 1px solid var(--border);
+    background: var(--white);
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 26px 28px;
+      color: var(--forest);
+      cursor: pointer;
+      list-style: none;
+
+      // Remove the browser default disclosure triangle.
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &:focus-visible {
+        outline: 3px solid var(--orange);
+        outline-offset: 4px;
+      }
+
+      small {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      strong {
+        font-family: var(--serif);
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+
+    // Custom +/− toggle icon replacing the default browser marker.
+    .summary-mark {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 auto;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 3px;
+        width: 18px;
+        height: 2px;
+        background: var(--orange);
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &[open] .summary-mark::after {
+      transform: rotate(0);
+    }
+  }
+
+  .transcript-content {
+    padding: 4px 28px 30px;
+    border-top: 1px solid var(--border);
+
+    p:first-child {
+      padding-top: 25px;
+    }
+
+    strong {
+      color: var(--ink);
+    }
+  }
+
+  .sources {
+    padding-top: 45px;
+    border-top: 1px solid var(--border);
+
+    ul {
+      margin: 24px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 9px;
+      color: var(--forest);
+    }
+
+    a {
+      color: var(--forest);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+  }
+
+  .story-end {
+    padding: 35px 0 0;
+    border-top: 1px solid var(--border);
+
+    p {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .editorial-link {
+      flex-direction: row-reverse;
+
+      &:hover svg {
+        transform: translateX(-4px);
+      }
+    }
+  }
+}

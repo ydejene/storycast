@@ -1,0 +1,62 @@
+// Typography — heading scale, body text, and shared text elements.
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+  }
+
+  h1 {
+    margin-bottom: 28px;
+    font-size: clamp(54px, 5vw, 74px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+  }
+
+  // Colored italic variant used in hero and section headings.
+  h1 em,
+  h2 em {
+    color: var(--forest);
+    font-weight: 400;
+  }
+
+  blockquote {
+    margin: 0 0 32px;
+    padding: 0 0 0 20px;
+    border-left: 3px solid var(--orange);
+    color: var(--forest);
+    font-family: var(--serif);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  // Eyebrow label used above section headings across all pages.
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0 0 24px;
+    color: var(--forest);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    span {
+      // Decorative orange dash preceding the label text.
+      width: 28px;
+      height: 2px;
+      background: var(--orange);
+    }
+  }
+}

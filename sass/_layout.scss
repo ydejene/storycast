@@ -1,0 +1,16 @@
+// Layout — container, site shell, and cascade layer order declaration.
+
+// Cascade layer order must be declared here before any @layer use in partials.
+@layer reset, base, layout, components, page, utilities;
+
+@layer layout {
+  .site-shell {
+    min-width: 320px;
+    overflow: hidden;
+  }
+
+  .container {
+    width: min(100% - 64px, 1280px);
+    margin-inline: auto;
+  }
+}

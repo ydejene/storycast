@@ -1,0 +1,28 @@
+// Design tokens — custom properties and font imports.
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+:root {
+  // Color palette
+  --cream: #fdfaf2;
+  --white: #ffffff;
+  --forest: #11422c;
+  --forest-hover: #1b533a;
+  --orange: #d34a1b;
+  --ink: #121915;
+  --muted: #5e6b64;
+  --border: #e2ddd0;
+
+  // Typography
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans: "Source Sans 3", Arial, sans-serif;
+
+  // Spacing scale
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+}

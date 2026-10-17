@@ -1,0 +1,166 @@
+// Shared UI components used across multiple pages.
+
+@layer components {
+  // Inline arrow CTA — text variant has a bottom border; button variant has a filled background.
+  .editorial-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--forest);
+    font-size: 16px;
+    font-weight: 700;
+
+    &.text {
+      padding-bottom: 7px;
+      border-bottom: 2px solid var(--forest);
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+      transition: transform 180ms ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+
+    &.button {
+      min-height: 56px;
+      padding: 0 24px;
+      background: var(--forest);
+      color: var(--white);
+
+      &:hover {
+        background: var(--forest-hover);
+      }
+
+      &:hover svg {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  // Numbered section kicker — "01 Featured story ——"
+  .section-kicker {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 42px;
+
+    span {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      color: var(--forest);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    i {
+      height: 1px;
+      background: var(--border);
+    }
+  }
+
+  // Story card label — "Education · Schizophrenia"
+  .story-label {
+    margin-bottom: 19px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  // Small icon box used on topic cards and format list.
+  .topic-icon {
+    display: grid;
+    width: 72px;
+    height: 72px;
+    place-items: center;
+    background: var(--cream);
+    border: 1px solid var(--border);
+
+    svg {
+      width: 42px;
+      height: 42px;
+      fill: none;
+      stroke: var(--orange);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.5;
+    }
+  }
+
+  .status-badge {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  // Back-navigation link used on story and about pages.
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 70px;
+    color: var(--forest);
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover span {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+  }
+
+  // Photo attribution overlay inside image frames.
+  .photo-credit {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    padding: 3px 6px;
+    background: rgb(18 25 21 / 68%);
+    color: var(--white);
+    font-size: 10px;
+    letter-spacing: 0.02em;
+
+    &.dark {
+      right: auto;
+      left: 10px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// Site header, wordmark, primary navigation, and skip link.
+
+@layer components {
+  // Keyboard-accessible skip link — visible only on focus.
+  .skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 100;
+    transform: translateY(-150%);
+    background: var(--white);
+    color: var(--forest);
+    padding: 10px 16px;
+    border: 2px solid var(--forest);
+    font-weight: 700;
+
+    &:focus {
+      transform: translateY(0);
+    }
+  }
+
+  .site-header {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--forest);
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1;
+
+    &:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 5px;
+    }
+  }
+
+  // Animated sound-bar mark — four bars of varying heights.
+  .wordmark-mark {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    i {
+      display: block;
+      width: 3px;
+      border-radius: 3px;
+      background: var(--orange);
+    }
+
+    i:nth-child(1),
+    i:nth-child(4) {
+      height: 11px;
+    }
+
+    i:nth-child(2) {
+      height: 22px;
+    }
+
+    i:nth-child(3) {
+      height: 29px;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-self: stretch;
+    align-items: stretch;
+    gap: 44px;
+
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 600;
+
+      &:hover,
+      &.active {
+        color: var(--forest);
+      }
+
+      // Active page indicator — orange underline on the nav item.
+      &.active::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: var(--orange);
+      }
+    }
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 5px;
+  }
+}

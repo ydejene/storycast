@@ -1,0 +1,402 @@
+// Responsive overrides — three breakpoints matching the prototype exactly.
+
+@layer page {
+  @media (max-width: 1050px) {
+    .hero-grid {
+      gap: 36px;
+    }
+
+    .hero-copy {
+      padding-left: 28px;
+    }
+
+    .hero-visual {
+      min-height: 520px;
+    }
+
+    .hero-image-frame {
+      right: 35px;
+      height: 445px;
+    }
+
+    .story-note {
+      width: 250px;
+    }
+
+    .featured-copy {
+      padding: 48px 42px;
+    }
+
+    .topics-grid {
+      gap: 46px;
+    }
+
+    .article-layout {
+      grid-template-columns: 190px minmax(0, 680px);
+      gap: 54px;
+    }
+
+    .about-hero-grid,
+    .formats-grid,
+    .trusted-grid {
+      gap: 55px;
+    }
+
+    .mission-grid {
+      grid-template-columns: 50px 1fr 0.9fr;
+      gap: 28px;
+    }
+
+    .section-heading-row {
+      gap: 55px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      width: min(100% - 40px, 680px);
+    }
+
+    .header-inner {
+      height: 82px;
+    }
+
+    nav {
+      gap: 22px;
+    }
+
+    .hero {
+      padding: 64px 0 80px;
+    }
+
+    .hero-grid,
+    .featured-story,
+    .topics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .hero-visual {
+      min-height: 560px;
+      margin-top: 24px;
+    }
+
+    .hero-image-frame {
+      left: 0;
+      right: auto;
+      width: calc(100% - 55px);
+      height: 480px;
+    }
+
+    .orange-block {
+      right: 0;
+    }
+
+    .featured-copy {
+      border-top: 0;
+      border-left: 1px solid var(--border);
+    }
+
+    .topic-cards {
+      gap: 16px;
+    }
+
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .story-hero {
+      padding-bottom: 68px;
+    }
+
+    .back-link {
+      margin-bottom: 50px;
+    }
+
+    .story-title-wrap h1 {
+      font-size: clamp(48px, 9vw, 68px);
+    }
+
+    .story-media-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .article-layout {
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+
+    // In-page nav becomes inline two-column grid on smaller screens.
+    .article-aside {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+
+      p {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .about-hero {
+      padding-bottom: 80px;
+
+      .back-link {
+        margin-bottom: 50px;
+      }
+    }
+
+    .about-hero-grid,
+    .mission-grid,
+    .section-heading-row,
+    .formats-grid,
+    .trusted-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-hero-grid,
+    .formats-grid,
+    .trusted-grid {
+      gap: 45px;
+    }
+
+    .about-intro,
+    .mission-copy {
+      padding: 25px 0 0;
+      border-top: 1px solid var(--border);
+      border-left: 0;
+    }
+
+    .mission-copy {
+      border-color: rgb(255 255 255 / 26%);
+    }
+
+    .approach-grid {
+      grid-template-columns: 1fr;
+
+      article,
+      article:first-child,
+      article:last-child {
+        padding: 32px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      article:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .approach-card-top {
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .container {
+      width: min(100% - 32px, 500px);
+    }
+
+    .wordmark {
+      font-size: 24px;
+    }
+
+    nav {
+      gap: 15px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    .hero-visual {
+      min-height: 500px;
+    }
+
+    .hero-image-frame {
+      width: calc(100% - 28px);
+      height: 420px;
+    }
+
+    .orange-block {
+      width: 160px;
+      height: 340px;
+    }
+
+    .story-note {
+      width: 245px;
+      min-height: 165px;
+      padding: 24px;
+    }
+
+    .featured-section,
+    .topics-section {
+      padding: 76px 0;
+    }
+
+    .featured-image {
+      min-height: 410px;
+    }
+
+    .featured-copy {
+      padding: 38px 26px 44px;
+
+      h2 {
+        font-size: 38px;
+      }
+    }
+
+    .topic-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .topic-card {
+      min-height: 320px;
+    }
+
+    .note-inner {
+      min-height: 290px;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      padding-block: 48px;
+    }
+
+    .footer-links {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 22px;
+    }
+
+    .story-hero {
+      padding: 32px 0 56px;
+    }
+
+    .back-link {
+      margin-bottom: 38px;
+    }
+
+    .story-title-wrap h1 {
+      font-size: 47px;
+    }
+
+    .story-deck {
+      font-size: 19px;
+    }
+
+    .story-media-section,
+    .story-article {
+      padding: 70px 0;
+    }
+
+    .story-media-heading h2,
+    .article-body h2 {
+      font-size: 36px;
+    }
+
+    .article-aside {
+      grid-template-columns: 1fr;
+
+      p {
+        grid-column: auto;
+      }
+    }
+
+    .article-body > section,
+    .article-callout {
+      margin-bottom: 72px;
+    }
+
+    .article-callout {
+      padding: 38px 28px 38px 48px;
+
+      p {
+        font-size: 23px;
+      }
+    }
+
+    .transcript {
+      summary {
+        padding: 22px 20px;
+
+        strong {
+          font-size: 21px;
+        }
+      }
+    }
+
+    .transcript-content {
+      padding: 4px 20px 25px;
+    }
+
+    .about-hero {
+      padding: 32px 0 60px;
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+    .mission-section,
+    .approach-section,
+    .about-accessibility,
+    .trusted-section {
+      padding: 74px 0;
+    }
+
+    .section-heading-row {
+      gap: 30px;
+      margin-bottom: 42px;
+
+      h2 {
+        font-size: 38px;
+      }
+    }
+
+    .formats-heading h2,
+    .trusted-grid h2 {
+      font-size: 38px;
+    }
+
+    .mission-grid h2 {
+      font-size: 43px;
+    }
+
+    .format-list article {
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+    }
+
+    .format-icon {
+      width: 54px;
+      height: 54px;
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .about-home-link {
+      padding: 58px 0;
+    }
+  }
+}
