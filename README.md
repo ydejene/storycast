@@ -53,31 +53,27 @@ The homepage photography is served from the existing Unsplash image URLs. The Go
 
 ## Install and Run
 
-### Video setup
-
-The story video is stored with Git LFS. Install Git LFS before cloning, then initialize it once for your user account:
+Clone the repository and enter the project directory:
 
 ```sh
-git lfs install
+git clone https://github.com/ydejene/storycast.git
+cd storycast
 ```
 
-A normal clone will then retrieve the video along with the repository. If the repository was cloned before Git LFS was installed, download its LFS files with:
-
-```sh
-git lfs pull
-```
-
-### Run locally
-
-From this directory:
+Install Sass and compile the stylesheet:
 
 ```sh
 npm install
 npm run sass:build
+```
+
+Start a local server from the `storycast` directory:
+
+```sh
 python -m http.server 3400
 ```
 
-Open `http://localhost:3400/`. The Python server uses the project directory as its document root. In VS Code, open this repository folder and use Live Server on `index.html`; project links are relative to their HTML documents so they also resolve under the repository's nested URL path.
+Open `http://localhost:3400/`. The Python server uses the project directory as its document root. In VS Code, open the repository folder and use Live Server on `index.html`; project links are relative to their HTML documents and work under the repository's nested URL path.
 
 The build compiles `sass/main.scss` to `css/main.css`, replacing the generated stylesheet. To recompile automatically while editing Sass, run `npm run sass:watch`.
 
